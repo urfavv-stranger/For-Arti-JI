@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy 20th Birthday Arti! ✨💖</title>
+
+  <!-- SEO & Social Sharing (WhatsApp, iMessage, Instagram preview) -->
+  <meta name="description" content="A special 20th birthday celebration crafted with love for Arti." />
+  <meta property="og:title" content="Happy 20th Birthday Arti! ✨💖" />
+  <meta property="og:description"
+    content="To the most wonderful soul who makes every day brighter. Tap to open your celebration!" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#230d24" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- CUTE LOVELY LOADING SCREEN -->
+  <div id="loading-screen">
+    <div class="loader-heart-wrapper">
+      <div class="loader-sparkles"></div>
+      <div class="loader-pulsing-heart">💖</div>
+    </div>
+    <h2 class="loader-title">For Dearest <span class="dynamic-name">Arti</span> ✨</h2>
+    <p class="loader-subtitle">Loading 20 years of cuteness, radiant smiles & magical memories...</p>
+    <div class="loader-bar-bg">
+      <div class="loader-bar-fill" id="loader-bar-fill"></div>
+    </div>
+    <button class="loader-enter-btn" id="loader-enter-btn">
+      <span>Open Arti's Surprise 💌✨</span>
+    </button>
+  </div>
+
+  <!-- FLOWING PINK HEART BUBBLES -->
+  <div id="heart-bubbles-container"></div>
+
+  <!-- Floating Sparkles & Stars Canvas -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Ambient Glow Effects -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <!-- Floating Romantic Music Player -->
+  <div class="audio-player-pill" id="audio-player-pill" title="Click to play / pause music">
+    <div class="vinyl-icon" id="vinyl-icon">
+      <div class="vinyl-center"></div>
+    </div>
+    <div class="audio-info">
+      <span class="audio-title" id="audio-title">Can't Help Falling in Love</span>
+      <span class="audio-status" id="audio-status">Tap to Play 🎵</span>
+    </div>
+    <button class="audio-toggle-btn" id="audio-toggle-btn" aria-label="Toggle music">▶</button>
+  </div>
+
+  <!-- Main Content Container -->
+  <main class="container">
+
+    <!-- 1. HERO SECTION -->
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span>💖</span>
+          <span>Celebrating Arti's 20th Birthday • 1st Oct 2026</span>
+          <span>✨</span>
+        </div>
+
+        <h1 class="hero-title serif-title">
+          Happy 20th Birthday,<br />
+          <span class="gradient-text dynamic-name">Arti</span>
+        </h1>
+
+        <p class="hero-subtitle" id="hero-tagline">
+          Happy 20th Birthday to the most radiant girl in the universe! ✨ Every day with you is pure magic.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#cake-section" class="btn-primary">
+            <span>Make a Wish (3 Candles) 🎂</span>
+          </a>
+          <a href="#memories-section" class="btn-secondary">
+            <span>Core Memories 📸</span>
+          </a>
+          <a href="#letter-section" class="btn-secondary">
+            <span>Letter for you 💌</span>
+          </a>
+        </div>
+
+        <!-- Birthday Countdown Card -->
+        <div class="countdown-box">
+          <div class="countdown-title" id="countdown-status-title">
+            Counting Down to 1st October 2026 💖
+          </div>
+          <div class="countdown-grid">
+            <div class="countdown-item">
+              <span class="countdown-num" id="cd-days">00</span>
+              <span class="countdown-label">Days</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-num" id="cd-hours">00</span>
+              <span class="countdown-label">Hours</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-num" id="cd-mins">00</span>
+              <span class="countdown-label">Minutes</span>
+            </div>
+            <div class="countdown-item">
+              <span class="countdown-num" id="cd-secs">00</span>
+              <span class="countdown-label">Seconds</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. MILESTONES & STATS -->
+    <section class="milestones-section">
+      <div class="milestones-grid" id="milestones-grid">
+        <!-- Rendered dynamically from config.js -->
+      </div>
+    </section>
+
+    <!-- 3. INTERACTIVE BIRTHDAY CAKE (3 CANDLES) -->
+    <section class="cake-section" id="cake-section">
+      <div class="section-header">
+        <span class="section-tag">20th Birthday Tradition</span>
+        <h2 class="section-title serif-title">Blow Out Your 3 Candles</h2>
+        <p class="section-desc">Tap each candle or press the button below to blow them out and make your 20th wish!</p>
+      </div>
+
+      <div class="cake-stage">
+        <div class="cake-container">
+          <!-- Row of EXACTLY 3 Candles with Glowing Flames -->
+          <div class="candles-row" id="candles-row">
+            <!-- Dynamically generated 3 candles with wicks & dancing flames -->
+          </div>
+
+          <!-- Cake Layers (Matching Reference Design) -->
+          <div class="cake-top">
+            <span class="cake-top-script">Happy Birthday</span>
+            <div class="cake-scallops"></div>
+          </div>
+          <div class="cake-base">
+            <div class="cake-stars">✦ &nbsp; ✦ &nbsp; ✦ &nbsp; ✦ &nbsp; ✦ &nbsp; ✦</div>
+            <div class="cake-name-plate">ARTI JI <span class="cake-heart">💖</span></div>
+          </div>
+          <div class="cake-stand">
+            <div class="plate"></div>
+            <div class="pedestal"></div>
+          </div>
+        </div>
+
+        <h3 class="cake-prompt" id="cake-prompt">Make a wish for your 20th year and blow out the 3 candles, Arti! 🎂✨
+        </h3>
+        <p class="cake-instructions">You can click each individual candle or use the button:</p>
+
+        <div class="cake-actions">
+          <button class="btn-primary" id="blow-candles-btn">
+            Blow Out All Candles 🌬️
+          </button>
+        </div>
+
+        <div class="cake-celebration-banner" id="cake-celebration-banner">
+          <h3 class="serif-title" style="color: var(--gold-accent); font-size: 1.8rem; margin-bottom: 8px;">
+            🎉 Happy 20th Birthday, My Love! 💖
+          </h3>
+          <p id="cake-banner-message" style="font-size: 1.15rem; color: #fff;">
+            May this milestone year bring you endless joy, love, and your wildest dreams! 🥂
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. POLAROID MEMORY LANE -->
+    <section class="memories-section" id="memories-section">
+      <div class="section-header">
+        <span class="section-tag">Memory Lane</span>
+        <h2 class="section-title serif-title">Moments I Cherish</h2>
+        <p class="section-desc">Capturing your gorgeous smile across your sweetest memories.</p>
+      </div>
+
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- Rendered directly from config.js img sources -->
+      </div>
+    </section>
+
+    <!-- 5. WHY I ADORE YOU, ARTI -->
+    <section class="reasons-section" id="reasons-section">
+      <div class="section-header">
+        <span class="section-tag-gold">LITTLE INFINITE THINGS</span>
+        <h2 class="section-title serif-title">Why I Adore You, Arti</h2>
+        <p class="section-subtitle-italic">A few of the million reasons you are one of a kind</p>
+        <div class="gold-divider-line"></div>
+      </div>
+
+      <div class="reasons-grid" id="reasons-grid">
+        <!-- Rendered dynamically from config.reasons -->
+      </div>
+    </section>
+
+    <!-- 6. LOVE LETTER (INTERACTIVE ENVELOPE) -->
+    <section class="letter-section" id="letter-section">
+      <div class="section-header">
+        <span class="section-tag">A Sealed Letter For You</span>
+        <h2 class="section-title serif-title">Written Just For Arti</h2>
+        <p class="section-desc">Tap the sealed envelope below to open your letter!</p>
+      </div>
+
+      <div class="envelope-interactive-stage">
+        <!-- Interactive Letter Envelope Box -->
+        <div class="envelope-box" id="envelope-box">
+
+          <!-- Top Envelope Triangular Flap -->
+          <div class="envelope-flap" id="envelope-flap">
+            <div class="envelope-flap-triangle"></div>
+          </div>
+
+          <!-- Front Details (Postage stamp & Addressed to Arti) -->
+          <div class="envelope-front-details" id="envelope-front-details">
+            <div class="envelope-stamp">
+              <span class="stamp-icon">🌸</span>
+              <span class="stamp-text">OCT 1 • 20th</span>
+            </div>
+
+            <div class="envelope-address">
+              <span class="envelope-to-label">To:</span>
+              <h4 class="envelope-to-name">Dearest Arti 💕</h4>
+              <p class="envelope-to-sub">Special Delivery • Handle With Love</p>
+            </div>
+
+            <!-- Glowing Wax Seal in Center -->
+            <div class="wax-seal-btn" id="wax-seal-btn">
+              <div class="wax-seal-stamp">
+                <span class="wax-seal-heart">❤️</span>
+              </div>
+              <span class="wax-seal-prompt">Tap to Open Letter 💌</span>
+            </div>
+          </div>
+
+          <!-- THE UNFOLDED HANDWRITTEN LETTER -->
+          <div class="letter-sheet" id="letter-sheet">
+            <div class="letter-sheet-inner">
+              <div class="letter-header-decor">
+                <span class="letter-decor-icon">💌</span>
+                <span class="letter-decor-tag">Private & Confidential</span>
+              </div>
+
+              <h3 class="letter-greeting" id="letter-greeting">Dearest Arti,</h3>
+              <p class="letter-body" id="letter-body">Loading your letter...</p>
+              <div class="letter-closing" id="letter-closing">With all my love & whole heart,</div>
+              <div class="letter-signature" id="letter-signature">Yours Forever ❤️</div>
+
+              <div class="letter-fold-action">
+                <button class="letter-refold-btn" id="letter-refold-btn">
+                  <span>Fold Back into Envelope ✉️</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. SURPRISE GIFT BOX -->
+    <section class="surprise-section" id="surprise-section">
+      <div class="section-header">
+        <span class="section-tag">Special Treat</span>
+        <h2 class="section-title serif-title">A 20th Birthday Surprise</h2>
+        <p class="section-desc">Because turning 20 calls for an extra special treat!</p>
+      </div>
+
+      <div class="gift-box-wrapper">
+        <div class="gift-box-card" id="gift-box-card">
+          <div class="gift-3d-icon">🎁</div>
+          <h3 class="serif-title" style="font-size: 1.6rem; margin-bottom: 8px;">A Special Surprise</h3>
+          <p id="gift-tap-prompt" style="color: var(--gold-accent); font-weight: 500;">
+            Tap the pink ribbon to unwrap your gift! ✨
+          </p>
+
+          <div class="surprise-revealed" id="surprise-revealed">
+            <div class="coupon-ticket">
+              <h4 class="serif-title" style="color: var(--gold-accent); font-size: 1.5rem; margin-bottom: 8px;">
+                🎉 VIP Birthday Celebration Pass!
+              </h4>
+              <p id="surprise-message" style="color: #fff; font-size: 1.05rem; line-height: 1.6;">
+                This pass entitles Arti to an all-expenses-paid dream birthday date: your favorite food, unlimited
+                desserts, cute surprises, and whatever makes you happiest! No expiration date, redeemable anytime. 🥂✨
+              </p>
+              <div class="coupon-code" id="surprise-coupon">ARTI-TURNS-20-VIP</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modal for Photo Lightbox Preview -->
+  <div class="modal-overlay" id="image-modal">
+    <div class="modal-box">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close image">✕</button>
+      <img src="" alt="Enlarged photo" class="modal-img" id="modal-img" />
+      <div class="modal-caption">
+        <h4 id="modal-title" style="font-family: var(--font-cursive); font-size: 1.8rem; color: #2e1026;"></h4>
+        <div id="modal-date" style="font-size: 0.8rem; color: #777; margin-bottom: 6px;"></div>
+        <p id="modal-desc" style="font-size: 0.95rem; color: #444;"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer (Matching Reference Design) -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <h2 class="footer-gold-script">Happy Birthday, Arti</h2>
+      <p class="footer-dedication">
+        Crafted with endless affection, countless late nights, and a heart completely dedicated to you.
+      </p>
+      <div class="footer-subtext">1st October 2026 • Forever & Always 💕</div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
